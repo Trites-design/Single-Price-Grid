@@ -1,0 +1,118 @@
+body {
+    background-color: hsl(204, 43%, 93%);
+}
+.container {
+    display: grid;
+    border-radius: 2%;
+    width: 340px;
+    margin: auto;
+    justify-content: center;
+    padding: 70px;
+    grid-template-columns: 326px 327px;
+    grid-template-rows: 250px 250px;
+    grid-template-areas: 
+    'header header'
+    'section aside';
+}
+/* Header */
+header {
+    grid-area: header;
+    background-color: white;
+    border-radius: 10px 10px 0px 0px;
+    padding-left: 1.8rem;
+    padding-top: 0.9rem
+}
+header h1{
+    font-family: 'Karla', sans-serif;
+    color:white;
+    color: rgb(43, 179, 177);
+}
+header h2{
+    font-family: 'Karla', sans-serif;
+    color: hsl(71, 73%, 54%);
+}
+header p {
+    font-family: 'Karla', sans-serif;
+    line-height: 2rem;
+}
+/* Section */
+section {
+    grid-area: section;
+    background-color: rgb(43, 179, 177);
+    border-radius: 0px 0px 0px 10px;
+}
+section h2#month {
+    font-family: 'Karla', sans-serif;
+    color:white;
+    padding-left: 1.8rem;
+    padding-top: 0.6rem
+}
+section #price {
+    font-family: 'Karla', sans-serif;
+    color:white;
+    padding-left: 1.8rem;
+    display: inline;
+}
+section #label {
+    font-family: 'Karla', sans-serif;
+    color: hsl(204, 43%, 93%, 0.8);
+    display: inline;
+    padding-left: 5px;
+}
+section p {
+    font-family: 'Karla', sans-serif;
+    color:white;
+    padding-left: 1.8rem;
+}
+section button#btn {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.2rem;
+    color:white;
+    margin-left: 2.2rem;
+    width: 250px;
+    height: 50px;
+    background-color: rgb(194, 218, 70);
+    border: none;
+    border-radius: 5px;
+}
+/* Aside */
+aside {
+    grid-area: aside;
+    background-color: rgb(74, 190, 189);
+    border-radius: 0px 0px 10px 0px;
+}
+#asideh2 {
+    font-family: 'Karla', sans-serif;
+    color:white;
+    padding-left: 1.8rem;
+    padding-top: 0.6rem
+}
+aside p{
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    color: hsl(204, 43%, 93%, 0.8);
+    padding-left: 1.8rem;
+    line-height: 1.4rem;
+}
+
+@media (max-width:375px) {
+    .container {
+        display: grid;
+        grid-template-columns: 375px;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        'header'
+        'section'
+        'aside';
+    }
+
+    header p{
+        padding-right: 20px;
+    }
+    section button#btn {
+        display: block;
+        width: 300px;
+        position: relative;
+        top: 50px;
+    }
+}
